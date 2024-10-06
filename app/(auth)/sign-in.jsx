@@ -14,6 +14,11 @@ const SignIn = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   function handleSubmit() {
+    if(email=="admin@gmail.com"){
+      router.push('admin');
+      return;
+    }
+
     console.log(email, password);
     const userData = {
       email: email,
